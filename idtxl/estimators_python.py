@@ -36,8 +36,8 @@ class PythonKraskovCMI(Estimator):
             or "theiler_t" in settings
             or "algorithm_num" in settings
         ):
-            raise ValueError(
-                "This estimator currently does not support local_values, theiler_t or algorithm_num arguments."
+            print(
+                "RuntimeWarning: This estimator currently does not support local_values, theiler_t or algorithm_num arguments."
             )
 
         self._knn_finder_settings = settings.get("knn_finder_settings", {})
